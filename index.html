@@ -7,18 +7,17 @@
         <style> html * { font-family: monospace !important; } </style>
     </head>
     <body>
-        <h2>CS 106S: CodeBreaking</h2>
+        <h2>CS 106S: Passwords</h2>
         <h3>Veigeniree Cipher</h3>
-        <form action="/action_page.php">
-          Plaintext: <input type="text" id="plaintext"><br>
-          Key: <input type="text" id="key"><br>
-          <input type="button" onclick="VigenereHelper()" value="Submit">
+        <form action="/non_existant.php">
+          Username: <input type="text" id="username"><br>
+          Password: <input type="text" id="password"><br>
+          <input type="button" onclick="submitPassword()" value="Submit">
         </form>
-        <p style="display: none" id="ciphertext">CipherText: </p>
+        <p style="display: none" id="encryptedPass">CipherText: </p>
 
-        <h3>Substitution Cracker</h3>
-        <!-- TODO: Add src="assignment.js" to run your assignment -->
-        <script src="background.js" charset="utf-8"></script>
         <script src="assignment.js" charset="utf-8"></script>
+        <script src="background.js" charset="utf-8"></script>
+        <!-- TODO: Add src="assignment.js" to run your assignment -->
     </body>
 </html>
