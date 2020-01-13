@@ -14,12 +14,16 @@
           Password: <input type="text" id="password"><br>
           <input type="button" onclick="submitPassword()" value="Submit">
         </form>
-        <p style="display: none" id="encryptedPass">CipherText: </p>
+        <p style="display: none" id="encryptedPass"></p>
 
 
-        Encrypted Sentence: <input type="text" id="encryption"><br>
-        <!-- <input type="text" id=""><br> -->
-        <input type="button" onclick="encryptionCracker()" name="button"></button>
+        <br><br><br>
+        <form class="" action="index.html" method="post">
+          Encrypted: <input type="text" id="encryption"><br>
+          <!-- <input type="text" id=""><br> -->
+          <input type="button" onclick="encryptionCracker()" value="Decrypt"></button>
+        </form>
+        <p style="display: none" id="decryptedMsg"></p>
 
         <!-- TODO: Add src="assignment.js" to run your assignment -->
         <script src="solution.js" charset="utf-8"></script>

@@ -9,9 +9,9 @@ function submitPassword() {
 }
 
 function encryptionCracker() {
-  var encrypted_msg = document.getElementById("encryption")
-  decrypted_msg = substitutionDecrypter(encrypted_msg)
+  var encrypted_msg = document.getElementById("encryption").value
+  var decrypted_msg = substitutionDecrypter(encrypted_msg)
   decrypted_element = document.getElementById("decryptedMsg")
   decrypted_element.style = ""
-  decrypted_element.innerHTML = decryptedMSG
+  decrypted_element.innerHTML = decrypted_msg
 }
