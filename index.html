@@ -8,7 +8,7 @@
     </head>
     <body>
         <h2>CS 106S: Passwords</h2>
-        <h3>Veigeniree Cipher</h3>
+        <h3>Login Here!</h3>
         <form action="/non_existant.php">
           Username: <input type="text" id="username"><br>
           Password: <input type="text" id="password"><br>
@@ -16,8 +16,13 @@
         </form>
         <p style="display: none" id="encryptedPass">CipherText: </p>
 
-        <script src="assignment.js" charset="utf-8"></script>
-        <script src="background.js" charset="utf-8"></script>
+
+        Encrypted Sentence: <input type="text" id="encryption"><br>
+        <!-- <input type="text" id=""><br> -->
+        <input type="button" onclick="encryptionCracker()" name="button"></button>
+
         <!-- TODO: Add src="assignment.js" to run your assignment -->
+        <script src="solution.js" charset="utf-8"></script>
+        <script src="background.js" charset="utf-8"></script>
     </body>
 </html>
