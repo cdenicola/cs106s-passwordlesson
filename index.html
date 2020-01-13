@@ -1,0 +1,24 @@
+<!-- CS 106S: CodeBreaking -->
+
+
+<!doctype html>
+<html>
+    <head>
+        <style> html * { font-family: monospace !important; } </style>
+    </head>
+    <body>
+        <h2>CS 106S: CodeBreaking</h2>
+        <h3>Veigeniree Cipher</h3>
+        <form action="/action_page.php">
+          Plaintext: <input type="text" id="plaintext"><br>
+          Key: <input type="text" id="key"><br>
+          <input type="button" onclick="VigenereHelper()" value="Submit">
+        </form>
+        <p style="display: none" id="ciphertext">CipherText: </p>
+
+        <h3>Substitution Cracker</h3>
+        <!-- TODO: Add src="assignment.js" to run your assignment -->
+        <script src="background.js" charset="utf-8"></script>
+        <script src="assignment.js" charset="utf-8"></script>
+    </body>
+</html>
