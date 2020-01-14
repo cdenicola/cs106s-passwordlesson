@@ -1,22 +1,102 @@
-console.log("Hello World! I'm printing from `assignment.js`");
 
-/*
+console.log("Hello World! I'm printing from `assignment.js`");
+const CAESAR_SHIFT = 10
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * *
+                  Password
+* * * * * * * * * * * * * * * * * * * * * * * */
+
+/* PART 1
+ * Encrypts password using Caesar Cipher
+ * ----
+ * Params:
+ * > password - plaintext password that we want to encrypt
  *
+ * Returns:
+ * > string - encrypted (ciphertext) password
  */
 function passwordEncrypter(password) {
-  return password;
+  return encryptCaesar(password, CAESAR_SHIFT)
 }
 
 
+/* PART 2
+ * Breaks Substitution Cipher
+ * ----
+ * Params:
+ * > encryptedPassword - encrypted ciphertext password that we want to break
+ *
+ * Returns:
+ * > string - plaintext password
+ */
+function passwordCracker(encryptedPassword) {
+  var undoShift = (26 - CAESAR_SHIFT) % 26
+  return encryptCaesar(encryptedPassword, undoShift)
+}
 
+/* * * * * * * * * * * * * * * * * * * * * * * *
+  Substitution Cipher Cracker
+* * * * * * * * * * * * * * * * * * * * * * * */
+
+/*
+ * Breaks Subsitution Cipher
+ * ----
+ * Params:
+ * > encrypted_msg - encrypted ciphertext message that we want to break
+ *
+ * Returns:
+ * > string - encrypted (ciphertext) password
+ */
 function substitutionDecrypter(encrypted_msg) {
-  return encrypted_msg;
+  //TODO: Find Word Frequences
+
+  /* Below is an example of a map/dictionary (both names are used)
+   * It maps a key (ie: "a") to a value (ie: "0")
+   * IN JS, use it like a vector.
+   *     map[key] => value
+   */
+  var letter_frequency = {
+    "a": 0, "b": 0, "c": 0, "d": 0, "e": 0,
+    "f": 0, "g": 0, "h": 0, "i": 0, "j": 0,
+    "k": 0, "l": 0, "m": 0, "n": 0, "o": 0,
+    "p": 0, "q": 0, "r": 0, "s": 0, "t": 0,
+    "u": 0, "v": 0, "w": 0, "x": 0, "y": 0,
+    "z": 0
+  }
+
+  encrypted_msg = encrypted_msg.toLowerCase()
+  for (var i = 0; i < encrypted_msg.length; i++)
+  {
+    if (isLetter(encrypted_msg[i])) {
+      letter_frequency[encrypted_msg[i]] += 1
+    }
+  }
+
+  //TODO: Use createFrequencyMap function
+  var substitution_key = createFrequencyMap(letter_frequency)
+  //Q: What is this key?
+
+  //TODO: Use substitution_key to translate the text automatically
+  var plaintext = ""
+  for (var i = 0; i < encrypted_msg.length; i++)
+  {
+    var char = encrypted_msg[i]
+    if (isLetter(char)) {
+      char = substitution_key[mapping[char]]
+    }
+    plaintext += char
+  }
+  return plaintext
 }
 
+// Part 3 Helpers;
 
 
-// WORK FROM LAST WEEK — USE FOR CODING ASSIGNMENT
 
+/* * * * * * * * * * * * * * * * * * * * * * * *
+  WORK FROM LAST WEEK — USE FOR CODING ASSIGNMENT
+* * * * * * * * * * * * * * * * * * * * * * * */
 /* mapping transforms some (lowercase) letter input
  * to a corrosponding number
  *   EX: mapping['a'] => 0
@@ -51,7 +131,10 @@ var alphabet = Object.keys(mapping);
  */
 
 function shiftLetter(original, shift) {
-  var origNum = mapping[original];
+  if (!isLetter(original)) {
+    return original
+  }
+  var origNum = mapping[original.toLowerCase()];
   var shiftedNum = (origNum + shift) % 26;
   var shiftedLetter = alphabet[shiftedNum];
   return shiftedLetter
@@ -130,4 +213,35 @@ function checkCaesar(encrypted, guess) {
 
 function encryptVigenere(original, keyword) {
 
+}
+
+
+
+
+// Custom Helper Functions for this Assignment
+
+/* Checks if character is a letter
+ * ----
+ * Params:
+ * > character - single character to check
+ *
+ * Returns:
+ * > bool - true if character is letter (a-z, A-Z), false otherwise
+ */
+function isLetter(character) {
+  return character.toLowerCase() != character.toUpperCase();
+}
+
+
+function createFrequencyMap(frequencyAnalysis) {
+  var sorted = Object.keys(frequencyAnalysis).sort(
+    function(a,b) {return frequencyAnalysis[a] - frequencyAnalysis[b]
+  });
+  var key = ""
+  var sorted_key_map = [3, 24, 8, 11, 15, 20, 23, 7, 19, 24, 6, 5, 21,  4, 12, 18, 17, 22, 16, 1, 10, 0, 25, 14, 13, 2]
+  //[1, 7, 22, 15, 16, 0, 24, 6, 19, 7, 21, 11, 5, 14, 8, 12, 9, 13, 25, 23, 4, 10, 18, 20, 17, 3]
+  for (let pos in sorted_key_map) {
+    key += sorted[sorted_key_map[pos]]
+  }
+  return key
 }

@@ -7,26 +7,510 @@
         <style> html * { font-family: monospace !important; } </style>
     </head>
     <body>
-        <h2>CS 106S: Passwords</h2>
+        <h1>CS 106S: Passwords</h1>
         <h3>Login Here!</h3>
-        <form action="/non_existant.php">
+        <form>
           Username: <input type="text" id="username"><br>
           Password: <input type="text" id="password"><br>
           <input type="button" onclick="submitPassword()" value="Submit">
         </form>
         <p style="display: none" id="encryptedPass"></p>
 
+        <br>
+        <h3>Password Decrypter</h3>
+        <input type="button" onclick="encryptionCracker()" value="Decrypt">
+        <p style="display: none" id="decryptedPass"></p>
 
         <br><br><br>
-        <form class="" action="index.html" method="post">
-          Encrypted: <input type="text" id="encryption"><br>
-          <!-- <input type="text" id=""><br> -->
-          <input type="button" onclick="encryptionCracker()" value="Decrypt"></button>
+        <h3>Substitution Cipher Cracker</h3>
+        <form>
+          <input type="button" onclick="decryptBook()" value="Crack">
         </form>
-        <p style="display: none" id="decryptedMsg"></p>
+        <h4>Book:</h4>
 
         <!-- TODO: Add src="assignment.js" to run your assignment -->
         <script src="solution.js" charset="utf-8"></script>
         <script src="background.js" charset="utf-8"></script>
+
+
+
+
+
+        <p id="book">cxs gks qsty gktg hnggsyrno ptw hcyx, gks lcwg hstngivnd pcltx ix gks pcyde ptw t vysxrk wrnddsyq
+        ltie xtlse txxsggs. txxsggs pcymse ix otyiw vcy gks enms txe enrksww es bnirks, txe ig eie
+        xcg swrtos gks enms'w xcgirs gktg wclscxs sfgytcyeixtyq ptw ocdiwkixb gks ospgsy. gks enms'w
+        xcgirs eie xcg swrtos gks xcgirs cv gks enrksww sigksy, pkc ptw xcg usyq hstngivnd hng odsxgq
+        wltyg. gks enrksww wsg thcng wgneqixb txxsggs txe wkcygdq vcnxe ksy teusywtyq'w gytbir vdtp.
+        rkcrcdtgs.
+        tylse xcp, gks enrksww wsg gc pcym. gks otdtrs es bnirks gnyxse ixgc t rtxeq rtwgds. gksys
+        psys oidsw cv rkcrcdtgs-rcusyse lixgw ix gks eytpixb ycclw, htwmsgw cv rkcrcdtgs-rcusyse
+        xcnbtgw ix gks otydcyw. txxsggs xsusy kte t rktxrs. ixwies t wstwcx, wks psxg vycl esdirtgs gc
+        pkcooixb, txe gks enms xsusy bdtxrse ix ksy eiysrgicx pigkcng wte hspidesylsxg rdcneixb kiw
+        sqsw.
+        hnggsyrno, tg vivgssx, mxsp xcxs cv gkiw. wks ptw xcg gks lcwg hstngivnd pcltx ix gks pcyde,
+        htysdq ix gks gco gpsxgq, txe gktg oyiltyidq cx ocgsxgitd, rsygtixdq xcg cx txq otygirndty rtys wks
+        gccm cv ksywsdv. wks ktgse gc ptwk ksy vtrs, wks dctgkse gks tyst hskixe ksy styw, wks ptw wirm cv
+        rclhixb ksy ktiy. pktg wks dimse gc ec ptw gc yies ksy kcyws txe gtnxg gks vtyl hcq.
+        gks kcyws'w xtls ptw "kcyws" (hnggsyrno ptw xsusy dcxb cx iltbixtgicx) txe ig rtls pksx wks
+        rtddse ig. txe ig eie pktg wks gcde ig. gks vtyl hcq eie pktg wks gcde kil gcc. trgntddq, ks ptw
+        lcys t qcnxb ltx xcp, hng ks kte hssx t vtyl hcq pksx, cyoktxse, ks kte rcls gc pcym vcy
+        ksy vtgksy, txe hnggsyrno ysvsyyse gc kil gktg ptq wgidd.
+        "vtyl hcq, vsgrk ls gkiw"; "bsg ls gktg, vtyl hcq jnirmdq, dtaq gkixb, gycg xcp cy i'dd gsdd
+        vtgksy."
+        "tw qcn piwk."
+        gktg ptw tdd ks susy txwpsyse. "tw qcn piwk."
+        ks diuse ix t kcusd cng xsty gks txiltdw txe, trrcyeixb gc hnggsyrno'w lcgksy, ks msog ig rdstx.
+        ks susx yste pksx ks kte rtxedsw.
+        pksx hnggsyrno ptw tdlcwg wsusxgssx, t ltx ix t rtyyitbs rtls gc gcpx txe ptgrkse tw wks
+        yces vcy oycuiwicxw. cgksy lsx kte bcxs cng cv gksiy ptq gc rtgrk wibkg cv ksy; cgksy lsx kte
+        susx yieesx gpsxgq lidsw vcy gks oyiuidsbs, tw gkiw ltx kte. gks ilocygtxrs ksys iw gktg gkiw ptw
+        gks viywg yirk ltx pkc kte hcgksyse gc ec wc. txe ig ptw gkiw ltx, pkcws xtls iw dcwg gc
+        txgijnigq, pkc lsxgicxse hnggsyrno gc gks rcnxg. gks dtxe cv vdcyix ptw wsg hsgpssx pksys
+        wpsesx txe bsyltxq pcnde susxgntddq wsggds. (gkiw ptw hsvcys snycos.) ix gkscyq, ig ptw yndse
+        5
+        hq mixb dcgktycx txe kiw wsrcxe pivs, gks jnssx. hng ix vtrg, gks mixb ptw htysdq ktxbixb cx,
+        rcnde cxdq ytysdq gsdd etq vycl xibkg, txe htwirtddq wosxg kiw gils ix lnggsyixb.
+        oyixrs knlosyeixrm trgntddq ytx gkixbw. iv gksys kte hssx t snycos, ks pcnde ktus hssx gks
+        lcwg ocpsyvnd ltx ix ig. susx tw ig ptw, xchceq pigkix t gkcnwtxe lidsw ptxgse gc lsww pigk
+        kil.
+        gks rcnxg ptw oyixrs knlosyeixrm'w cxdq rcxvietxg. kiw dtwg xtls ptw ynbsx. gks rcnxgsww
+        ptw rcxwiesythdq qcnxbsy gktx ksy knwhtxe. tdd cv ksy rdcgksw rtls vycl otyiw (gkiw ptw tvgsy
+        otyiw) txe wks kte wnosyh gtwgs. (gkiw ptw tvgsy gtwgs, gcc, hng cxdq znwg. txe wixrs ig ptw wnrk t
+        xsp gkixb, txe wixrs gks rcnxgsww ptw gks cxdq dteq ix tdd vdcyix gc ocwwsww ig, iw ig txq pcxesy
+        wks ptw gks dsteixb kcwgsww cv gks dtxe?) ix wnl, gks ynbsxw psys rcnods cv gks pssm ix vdcyix,
+        txe kte hssx vcy ltxq qstyw. . . .
+        "jnirm, jnirm, rcls" hnggsyrno'w vtgksy wgcce ix kiw vtylkcnws, wgtyixb cng gks pixecp.
+        hnggsyrno rtls rdcws txe wgcce hskixe gksl, wgtyixb cusy gksl, txe wccx wks ptw btwoixb gcc,
+        hsrtnws gks rcnxg txe rcnxgsww txe tdd gksiy otbsw txe wcdeisyw txe wsyutxgw txe rcnygisyw txe
+        rktloicxw txe rtyyitbsw psys otwwixb hq gks rtyg gytrm tg gks vycxg cv gks vtyl.
+        "pktg rcnde gksq ptxg gc twm ls thcng?" ks wtie.
+        "bc wss, bc wss," hnggsyrno'w lcgksy gcde kil.
+        "qcn bc. odstws."
+        "ps'dd hcgk bc."
+        gksq hcgk psxg.
+        "rcpw," gks rcnxg wtie, pksx gksq ystrkse kiw bcdesx rtyyitbs. "i pcnde dims gc gtdm thcng qcny
+        rcpw."
+        "qsw. qcn wss, i'l gkixmixb cv wgtygixb t diggds etiyq cv lq cpx, txe wixrs qcny rcpw tys mxcpx
+        gkycnbkcng gks dtxe tw hsixb vdcyix'w vixswg, i gkcnbkg i libkg oyq qcny wsrysgw vycl qcn."
+        hnggsyrno'w vtgksy gnyxse gc kiw pivs.
+        "pktg pcnde qcn wtq lq wsrysg iw, lq esty?" ks twmse.
+        "ck, gksys tys wc ltxq," wks wtie, wks ptw xc enllq, xcg pksx ig rtls gc gks jntdigq cv gksiy
+        diuswgcrm.
+        "qcn gpc tys rkidedsww, tys qcn?" gks rcnxg twmse gksx.
+        "xc, wiy," gks lcgksy txwpsyse.
+        "gksx dsg ls wss ksy," gks rcnxg psxg cx "osyktow wks pidd hs jnirmsy pigk ksy txwpsyw gktx ksy
+        otysxgw."
+        "hnggsyrno," gks vtgksy rtddse, gnyxixb. "rcls cng odstws."
+        hnggsyrno lcuse ixgc uisp, knyyqixb vycl gks kcnws gc ksy otysxgw. gks rcnxg dsvg gks rtyyitbs.
+        bytrsvnddq, ks lcuse gc gks bycnxe txe wgcce usyq wgidd. ks ptw t hib ltx, pigk hdtrm ktiy txe
+        hdtrm sqsw txe bystg wkcndesyw txe t hdtrm rtos txe bdcusw.
+        "rnygwq, esty," hnggsyrno'w lcgksy pkiwosyse.
+        hnggsyrno eie ksy hswg. txe gks rcnxg rcnde xcg wgco dccmixb tg ksy. nxesywgtxe xcp, wks ptw
+        htysdq ytgse ix gks gco gpsxgq; ksy ktiy ptw nxrclhse, nxrdstx; ksy tbs ptw znwg wsusxgssx, wc
+        gksys ptw wgidd, ix crrtwicxtd odtrsw, gks ysltixw cv hthq vtg. xcgkixb ptw ystddq gksys hng
+        ocgsxgitd. hng gks rcnxg wgidd rcnde xcg yio kiw sqsw tptq.
+        "gks rcnxg pcnde dims gc mxcp gks wsrysgw hskixe cny rcpw' bystgxsww, iw gktg xcg rcyysrg, wiy?"
+        hnggsyrno'w vtgksy wtie.
+        "twm gks vtyl hcq; ks gsxew gksl," hnggsyrno wtie.
+        6
+        "txe iw gktg gks vtyl hcq?" rtls t xsp ucirs vycl ixwies gks rtyyitbs. gksx gks rcnxgsww'w vtrs
+        ptw vytlse ix gks rtyyitbs eccyptq. hnggsyrno'w vtgksy bdtxrse htrm gcptye gks dcxs vibnys
+        ossyixb tycnxe gks rcyxsy cv gks kcnws.
+        "ig iw."
+        gksx wks rtddse cng: "qcn!" txe ocixgse tg gks vtyl hcq. "rcls ksys." ksy vixbsyw wxtoose cx
+        "ksys." gks vtyl hcq eie tw ks ptw gcde. txe pksx ks ptw rdcws, gks rcnxgsww dsvg gks rtyyitbs.
+        "ktus qcn t xtls, vtyl hcq?"
+        "pswgdsq, rcnxgsww."
+        "psdd, pswgdsq, osyktow qcn rtx ksdo nw pigk cny oychdsl."
+        "ps tys tdd cv nw ksys otwwicxtgsdq ixgsyswgse ix gks wnhzsrg cv rcpw. pkq, ec qcn wnoocws,
+        pswgdsq, gktg gks rcpw cv gkiw otygirndty vtyl tys gks vixswg ix tdd vdcyix. pktg ec qcn ec gc
+        gksl?"
+        "i znwg vsse gksl, rcnxgsww."
+        "psdd gksx, gksys ig iw, gks lqwgsyq iw wcduse. rdstydq, gks ltbir iw ix pswgdsq'w vsseixb. wkcp ls
+        kcp qcn ec ig, pcnde qcn, pswgdsq?" wc cvv gksq psxg gc gks rcpwkse. gkycnbkcng tdd gkiw, gks
+        rcnxg msog ptgrkixb hnggsyrno.
+        "i'dd ksdo qcn," hnggsyrno rtddse tvgsy pswgdsq.
+        "osyktow i'e hswg wss znwg kcp ks ecsw ig," gks rcnxg esriese.
+        "wgytxbs gkixbw tys ktoosxixb," hnggsyrno'w otysxgw wtie, ptgrkixb gks rcnxg, pkc ptw ptgrkixb
+        gksiy etnbkgsy, pkc ptw ptgrkixb gks rcnxgsww. pkc ptw ptgrkixb pswgdsq.
+        hnggsyrno psxg gc ksy yccl. wks dtq cx ksy hse. wks rdcwse ksy sqsw. txe gks rcnxgsww ptw
+        wgtyixb tg pswgdsq. hnggsyrno bcg no vycl hse. wks gccm cvv ksy rdcgksw. wks ptwkse t diggds. wks
+        bcg ixgc ksy xibkgbcpx. wks wdioose hsgpssx gks wkssgw, wxnbbdse ecpx, rdcwse ksy sqsw. gks
+        rcnxgsww pcnde xcg wgco wgtyixb tg pswgdsq! pkq?
+        gks vtyl hcq kte sqsw dims gks wst hsvcys t wgcyl, hng pkc rtyse thcng sqsw? txe ks kte otds
+        hdcxe ktiy, iv qcn dimse gktg wcyg cv gkixb. txe rsygtixdq ks ptw lnwrndty, hng txqhceq pcnde hs
+        lnwrndty pkc wdtuse tdd etq.
+        "ck," hnggsyrno btwose. "ck, ck esty."
+        xcp gks vtyl hcq ptw wgtyixb htrm tg gks rcnxgsww...
+        hnggsyrno znlose cng cv hse txe hsbtx gc otrs ksy yccl. kcp rcnde ks? ck, ig ptw tdd yibkg iv
+        ks dccmse tg ksy, hng ks ptwx'g dccmixb tg ksy, ks ptw dccmixb tg ksy. vdtidixb txe gkytwkixb,
+        hnggsyrno psog txe gcwwse txe otrse txe psog wcls lcys, txe gksys ktus hssx gkyss bystg rtwsw
+        cv zstdcnwq wixrs etuie cv btdidss ptw viywg tvvdirgse pigk gks slcgicx pksx ks rcnde xc dcxbsy
+        wgtxe gks vtrg gktg kiw xsibkhcy wtnd'w rtrgnw cngwkcxs kiw cpx. hnggsyrno'w rtws ytgse t rdcws
+        vcnygk cx gks tdd-gils diwg.
+        wks ptw cngwies kiw kcusd hsvcys etpx. wks mxcrmse. ks toostyse, wgcce ix gks eccyptq. ks
+        ptigse. wks dccmse tg kil. gksx wks dccmse tptq. ks ptw gcc hstngivnd.
+        "i dcus qcn," hnggsyrno wtie. "i mxcp gkiw lnwg rcls tw wclsgkixb cv t wnyoyiws, wixrs tdd i'us
+        susy ecxs iw wrcyx qcn txe esbytes qcn txe gtnxg qcn, hng i ktus dcuse qcn vcy wsusytd kcnyw
+        xcp, txe susyq wsrcxe, lcys. estyswg pswgdsq, i'us xsusy rtddse qcn gktg hsvcys, ktus i?
+        pswgdsq, pswgdsq, pswgdsq, pswgdsq, pswgdsq etydixb pswgdsq, wpssg osyvsrg pswgdsq, pkiwosy
+        7
+        gktg i ktus t rktxrs gc pix qcny dcus." txe pigk gktg, wks etyse gks hytuswg gkixb wks'e susy
+        ecxs: wks dccmse yibkg ixgc kiw sqsw.
+        ks rdcwse gks eccy ix ksy vtrs.
+        hnggsyrno ytx. wks pkiydse txe hnywg tptq txe gks gstyw rtls higgsydq; wks rcnde xcg wss, wks
+        wgnlhdse, wks wdtllse ixgc t gyss gynxm, vsdd, ycws, ytx cx. htrm gc ksy yccl wks vdse, htrm gc
+        ksy oiddcp. wtvs hskixe gks dcrmse eccy, wks eysxrkse gks pcyde pigk gstyw. ig ptw enwm pksx wks
+        kstye vccgwgsow cngwies ksy eccy. gksx t mxcrm.
+        "pkcsusy iw gktg?" hnggsyrno qtpxse vixtddq.
+        "pswgdsq."
+        wks psxg gc ksy eccy, nxdcrmse ig, txe wtie, ix ksy vtxriswg gcxs, "i'l susy wc bdte qcn wgcoose
+        hq, i'us hssx vssdixb znwg susy wc wdnllq thcng gks diggds zcms i odtqse cx qcn gkiw lcyxixb. cv
+        rcnyws qcn mxsp i ptwx'g vcy t lclsxg wsyicnw…”
+        "i'us rcls gc wtq bcce-hq. i’l dstuixb.”
+        "dstuixb?" wks ksde gc gks eccyvytls. "xcp?"
+        "qsw."
+        "hsrtnws cv pktg i wtie gkiw lcyxixb?"
+        "qsw."
+        "i vyibkgsxse qcn tptq, eiex'g i? i rcnde midd lq gcxbns."
+        "i'l bcixb gc tlsyirt. gc wssm lq vcygnxs." (gkiw ptw znwg tvgsy tlsyirt hng dcxb tvgsy
+        vcygnxsw.)
+        "ec qcn dcus ls, pswgdsq? iw gktg ig?"
+        ks rcndex'g hsdisus ig. "ec i dcus qcn? i ktus wgtqse gksws qstyw ix lq kcusd hsrtnws cv qcn. i
+        ktus ltes lq hceq wgycxb hsrtnws i gkcnbkg qcn libkg hs odstwse hq t wgycxb hceq. i ktus xcg
+        mxcpx t lclsxg ix qstyw pksx gks wibkg cv qcn eie xcg wsxe lq kstyg rtyssxixb tbtixwg lq yih
+        rtbs.”
+        "iv qcn'ys gstwixb ls, pswgdsq, i'l znwg bcixb gc midd qcn."
+        "kcp rtx qcn susx eystl i libkg hs gstwixb?"
+        "psdd, qcn ktusx'g cxrs wtie qcn dcuse ls."
+        “i'us hssx wtqixb ig wc dcxb gc qcn, qcn znwg pcndex'g diwgsx. susyq gils qcn wtie 'vtyl hcq ec
+        gkiw' qcn gkcnbkg i ptw txwpsyixb 'tw qcn piwk' hng gktg'w cxdq hsrtnws qcn psys kstyixb pycxb.
+        'i dcus qcn' ptw pktg ig ptw, hng qcn xsusy kstye, txe qcn xsusy kstye."
+        "i ksty qcn xcp, txe i oycliws qcn gkiw: i pidd xsusy dcus txqcxs sdws. cxdq pswgdsq. nxgid i
+        eis."
+        ks xceese, gccm t wgso tptq. "i'dd wsxe vcy qcn wccx. hsdisus ls."
+        ks ystrkse cng pigk kiw yibkg ktxe. hnggsyrno vcnxe ig usyq ktye gc hystgks. wks ltxtbse gc
+        ytiws ksy yibkg ktxe gc kiw.
+        gksq wkccm.
+        "bcce-hq," ks wtie.
+        wks ltes t diggds xce. ks gccm t gkiye wgso, xcg gnyxixb.
+        wks ptgrkse kil. ks gnyxse. txe gks pcyew yioose cng cv ksy: "pigkcng cxs miww?"
+        gksq vsdd ixgc strk cgksy'w tylw.
+        gks viywg lcyxixb tvgsy pswgdsq'w esotygnys, hnggsyrno gkcnbkg wks ptw sxgigdse gc ec xcgkixb
+        lcys gktx wig tycnxe lcoixb txe vssdixb wcyyq vcy ksywsdv. wks ystdiase gktg pswgdsq ptw cng ix
+        8
+        gks pcyde xcp, bsggixb xstysy txe xstysy gc dcxecx, txe pktg iv t hstngivnd rigq biyd rtnbkg kiw
+        vtxrq pkids wks ptw znwg htrm ksys lcdesyixb? wks knyyise ecpxwgtiyw gc pksys ksy otysxgw psys.
+        "pktg rtx i ec gc iloycus lq osywcxtd toostytxrs?"
+        "wgtyg hq htgkixb," ksy vtgksy wtie.
+        "txe ec wclsgkixb pigk qcny ktiy pkids qcn'ys tg ig," ksy lcgksy wtie.
+        "gktg pidd ec xirsdq vcy wgtygsyw," hnggsyrno wtie. wks wkccm ksy kste. "bytricnw, hng ig iwx'g stwq
+        hsixb gieq." nxetnxgse, wks wsg gc pcym. ksy ktiy ptw gks rcdcy cv tngnlx, txe ig kte xsusy hssx
+        rng, wc t gkcnwtxe wgycmsw gccm gils, hng wks eiex'g lixe, hsrtnws pswgdsq kte xsusy wssx ig
+        rdstx dims gkiw txe pcndex'g ks hs wnyoyiwse pksx wks wgsoose cvv gks hctg ix tlsyirt. ksy wmix
+        ptw gks rcdcy cv pixgyq rystl, txe wks wrynhhse ksy susyq ixrk psdd otwg bdiwgsxixb, txe gktg
+        ptwx'g lnrk vnx ystddq, hng pcndex'g pswgdsq hs odstwse pigk kcp rdstx wks ptw tw wks wgsoose
+        cvv gks hctg ix tlsyirt. txe usyq jnirmdq xcp, ksy ocgsxgitd hsbtx gc hs ystdiase. ksy dcus vcy
+        pswgdsq pcnde xcg wgco bycpixb.
+        pkirk ptw pkq pswgdsq'w estgk kig ksy gks ptq ig eie.
+        wks rtls kcls vycl esdiusyixb gks lidm txe ksy otysxgw psys pccesx.
+        "cvv gks rtycdixt rctwg," ksy vtgksy pkiwosyse.
+        ksy lcgksy pkiwosyse, "pigkcng ptyxixb. tg xibkg."
+        "pktg?" vycl hnggsyrno.
+        "oiytgsw," wtie ksy vtgksy.
+        "ks'w hssx gtmsx oyiwcxsy gksx?" hnggsyrno ltxtbse.
+        "ig ptw ychsygw," ksy vtgksy wtie. "gks eyste oiytgs ychsygw."
+        "ck," hnggsyrno wtie. "gks cxs pkc xsusy dstusw wnyuiucyw."
+        wks wgtqse gksys ltxq etqw. tg viywg ksy otysxgw gyise gc dnys ksy, hng wks pcnde xcg ktus ig. gksq
+        gccm gc dstuixb vcce cngwies ksy yccl, txe wks gccm higw txe wkysew, sxcnbk gc wgtq tdius. txe
+        pksx wks tg dtwg rtls cng, ksy sqsw psys eyq. ksy otysxgw wgtyse no vycl gksiy widsxg hystmvtwg tg
+        ksy. gksq hcgk wgtygse gc yiws hng wks ong t ktxe cng, wgcoose gksl.
+        "i rtx rtys vcy lqwsdv, odstws," txe wks wsg thcng bsggixb wcls vcce. gksq ptgrkse ksy rdcwsdq.
+        ix ocixg cv vtrg, wks kte xsusy dccmse tw psdd. wks kte sxgsyse ksy yccl tw znwg tx ilocwwihdq
+        dcusdq biyd. gks pcltx pkc slsybse ptw t gyivds gkixxsy, t bystg estd piwsy, txe tx crstx
+        wteesy. gkiw cxs nxesywgcce gks xtgnys cv otix, txe hsxstgk gks bdcyq cv ksy vstgnysw, gksys ptw
+        rktytrgsy, txe t wnys mxcpdsebs cv wnvvsyixb.
+        wks ptw sibkgssx. wks ptw gks lcwg hstngivnd pcltx ix t knxeyse qstyw. wks eiex'g wssl gc
+        rtys.
+        "qcn'ys tdd yibkg?" ksy lcgksy twmse.
+        "qsw," hnggsyrno ysodise. gksys ptw t usyq dcxb otnws. "hng i pidd xsusy dcus tbtix."
+        wks xsusy eie.
+        gpc
+        gks byccl
+        9
+        oyixrs knlosyeixrm ptw wktose dims t htyysd. kiw rkswg ptw t bystg htyysd rkswg, kiw gkibkw
+        libkgq htyysd gkibkw. ks ptw xcg gtdd hng ks psibkse rdcws gc 250 ocnxew, hyirm ktye. ks ptdmse
+        dims t ryth, wies gc wies, txe oychthdq iv ks kte ptxgse gc hs t htddsg etxrsy, ks pcnde ktus hssx
+        ecclse gc t liwsythds divs cv sxedsww vynwgytgicx. hng ks eiex'g ptxg gc hs t htddsg etxrsy. ks
+        ptwx'g ix gktg lnrk cv t knyyq gc hs mixb sigksy. susx pty, tg pkirk ks sfrsddse, gccm wsrcxe
+        odtrs ix kiw tvvsrgicxw.
+        knxgixb ptw kiw dcus.
+        ix gks hsbixxixb, ks gytusywse gks pcyde vcy coocwigicx. hng gytusd rcxwnlse gils, wkiow txe
+        kcywsw hsixb pktg gksq psys, txe gks gils tptq vycl vdcyix ptw pcyyqixb. gksys tdptqw kte gc
+        hs t ltds ksiy gc gks gkycxs, txe tw dcxb tw kiw vtgksy ptw tdius, gksys ptw xc oychdsl. hng
+        wclsetq kiw vtgksy pcnde eis txe gksx gks oyixrs pcnde hs gks mixb txe ks pcnde ktus gc wsdsrg
+        t jnssx gc wnoodq tx ksiy vcy gks etq cv kiw cpx estgk.
+        wc gc tucie gks oychdsl cv thwsxrs, oyixrs knlosyeixrm hnidg gks acc cv estgk.
+        ig ptw nxesybycnxe. gks oyixrs oirmse gks wocg kilwsdv, ix gks jnisgswg, yslcgswg rcyxsy cv gks
+        rtwgds bycnxew. txe ks esrysse gksys psys gc hs vius dsusdw, tdd pigk gks oycosy xssew vcy kiw
+        ixeiuientd sxslisw. cx gks viywg dsusd, ks ong sxslisw cv wosse: pide ecbw, rkssgtkw,
+        knllixbhiyew. cx gks wsrcxe dsusd hsdcxbse gks sxslisw cv wgysxbgk: txtrcxetw txe ykixcw txe
+        rycrceidsw cv cusy gpsxgq vssg. gks gkiye dsusd ptw vcy ociwcxsyw: woiggixb rchytw, znloixb
+        woiesyw, estgk htgw btdcys. gks vcnygk dsusd ptw gks mixbecl cv gks lcwg etxbsycnw, gks sxslisw
+        cv vsty: gks wkyismixb gtytxgndt (gks cxdq woiesy rtothds cv wcnxe), gks hdcce stbds (gks cxdq hiye
+        gktg gkyiuse cx knltx vdswk), odnw, ix igw cpx hdtrm occd, gks wnrmixb wjnie.
+        gks vivgk dsusd ptw slogq.
+        gks oyixrs rcxwgynrgse ig ix gks kcosw cv wclsetq vixeixb wclsgkixb pcygkq, wclsgkixb tw
+        etxbsycnw txe visyrs txe ocpsyvnd tw ks ptw.
+        ks ptw yixbixb ecpx gks rnygtix cx tx cytxbngtx pksx gks hnwixsww cv gks mixb'w kstdgk ltes igw
+        ndgiltgs ixgynwicx. ig ptw lietvgsyxccx, txe gks oyixrs kte hssx bytoodixb pigk gks bitxg hstwg
+        wixrs lcyxixb, txe vixtddq, tvgsy tdd gksws kcnyw, gks ktiyq gkixb ptw pstmsxixb. rcnxg ynbsx'w
+        ucirs ixgsyynogse.
+        "gksys iw xspw," gks rcnxg wtie.
+        vycl htggds, gks oyixrs ysodise. "rtxxcg ig ptig?"
+        "vcy kcp dcxb?" twmse gks rcnxg.
+        r
+        y
+        t
+        r
+        m
+        gks cytxbngtx vsdd dims t ytb ecdd. "xcp, pktg iw tdd gkiw," gks oyixrs ysodise, wgsooixb otwg gks
+        este hstwg, lcnxgixb gks dteesy cng cv gks oig.
+        "qcny vtgksy ktw kte kiw txxntd okqwirtd," gks rcnxg wtie. "i ktus gks ysocyg."
+        "txe?"
+        10
+        "qcny vtgksy iw eqixb."
+        "eytg!" wtie gks oyixrs. "gktg lstxw i wktdd ktus gc bsg ltyyise."
+        gkyss
+        gks rcnygwkio
+        "i ptxg wclscxs pkc iw wc hstngivnd gktg pksx qcn wss ksy qcn wtq, 'pcp, gktg knlosyeixrm
+        lnwg hs wcls mixe cv vsddt gc ktus t pivs dims gktg.' wstyrk gks rcnxgyq, wstyrk gks pcyde, znwg
+        vixe ksy!"
+        rcnxg ynbsx rcnde cxdq wlids. "wks iw tdysteq vcnxe," ks wtie.
+        ig ptw etpx pksx gks gpc kcywslsx ysixse ix tg gks kiddgco. rcnxg ynbsx yces t wodsxeie hdtrm
+        kcyws, dtybs, osyvsrg, ocpsyvnd. gks oyixrs yces cxs cv kiw pkigsw.
+        "wks esdiusyw lidm ix gks lcyxixbw," rcnxg ynbsx wtie.
+        "txe wks iw gyndq-pigkcng-jnswgicx-xc-ocwwihidigq-cv-syycy hstngivnd?"
+        "wks ptw wclsgkixb cv t lsww pksx i wtp ksy," gks rcnxg teliggse. "hng gks ocgsxgitd ptw
+        cusypksdlixb."
+        "t lidmltie." gks oyixrs ytx gks pcyew trycww kiw ycnbk gcxbns. "i ecx'g mxcp gktg i rcnde pse
+        cxs cv gksl susx nxesy gks hswg cv rcxeigicxw. oscods libkg wxirmsy gktg wks ptw gks hswg i rcnde
+        ec."
+        "gyns," gks rcnxg teliggse. "iv qcn oysvsy, ps rtx yies htrm gc vdcyix rigq pigkcng ptigixb."
+        "ps'us rcls gkiw vty," gks oyixrs wtie. "ps libkg tw psdd pti…" kiw ucirs jnigs wilodq eise.
+        "i'dd gtms ksy," ks ltxtbse, vixtddq, tw hnggsyrno yces wdcpdq hq hsdcp gksl.
+        "xc cxs pidd wxirmsy, i gkixm," gks rcnxg wtie.
+        "i lnwg rcnyg ksy xcp," wtie gks oyixrs. "dstus nw tdcxs vcy t lixngs." ks yces gks pkigs
+        sfosygdq ecpx gks kidd. hnggsyrno kte xsusy wssx wnrk t bitxg hstwg. cy wnrk t yiesy.
+        "i tl qcny oyixrs txe qcn pidd ltyyq ls," knlosyeixrm wtie.
+        hnggsyrno pkiwosyse, "i tl qcny wsyutxg txe i ysvnws."
+        "i tl qcny oyixrs txe qcn rtxxcg ysvnws."
+        "i tl qcny dcqtd wsyutxg txe i znwg eie."
+        "ysvnwtd lstxw estgk."
+        "midd ls gksx."
+        "i tl qcny oyixrs txe i'l xcg gktg hte. kcp rcnde qcn ytgksy hs este gktx ltyyise gc ls?"
+        "hsrtnws," hnggsyrno wtie, "ltyyitbs ixucdusw dcus, txe gktg iw xcg t otwgils tg pkirk i sfrsd. i
+        gyise cxrs, txe ig psxg htedq, txe i tl wpcyx xsusy gc dcus txcgksy."
+        "dcus?" wtie oyixrs knlosyeixrm. "pkc lsxgicxse dcus? xcg ls, i rtx gsdd qcn. dccm: gksys
+        lnwg tdptqw hs t ltds ksiy gc gks gkycxs cv vdcyix.. cxrs lq vtgksy eisw, gksys pcx'g hs tx ksiy,
+        znwg t mixb. pksx gktg ktoosxw, i'dd ltyyq txe ktus rkideysx nxgid gksys iw t wcx. wc qcn rtx sigksy
+        ltyyq ls txe hs gks yirkswg txe lcwg ocpsyvnd pcltx ix t gkcnwtxe lidsw txe bius gnymsqw
+        tptq tg rkyiwgltw txe oycuies ls t wcx, cy qcn rtx eis ix gsyyihds otix ix gks usyq xsty vngnys.
+        ltms no qcny cpx lixe."
+        "i'dd xsusy dcus qcn."
+        "i pcndex'g ptxg ig iv i kte ig."
+        "gksx hq tdd lstxw dsg nw ltyyq."
+        11
+        vcny
+        gks oysotytgicxw
+        (ks wmiow gkiw pkcds rktogsy.)
+        vius
+        gks txxcnxrslsxg
+        gks bystg wjntys cv vdcyix rigq ptw viddse tw xsusy hsvcys, tptigixb gks ixgycenrgicx cv oyixrs
+        knlosyeixrm'w hyies-gc-hs, oyixrsww hnggsyrno cv ktllsywligk.
+        tg xccxgils, oyixrs knlosyeixrm toostyse tg gks htdrcxq cv kiw vtgksy'w rtwgds txe ytiwse kiw
+        tylw.
+        "ix gkyss lcxgkw, cny rcnxgyq rsdshytgsw igw vius knxeysegk txxiusywtyq. gc rsdshytgs gktg
+        rsdshytgicx, i wktdd, cx gktg wnxecpx, gtms vcy lq pivs gks oyixrsww hnggsyrno cv ktllsywligk.
+        qcn ec xcg mxcp ksy qsg. hng qcn pidd lssg ksy xcp," txe ks ltes t wpssoixb bswgnys txe gks
+        htdrcxq eccyw wpnxb cosx txe hnggsyrno lcuse cng hswies kil cx gks htdrcxq.
+        txe gks rycpe, jnigs digsytddq, btwose.
+        gks gpsxgq-cxs-qsty-cde oyixrsww vty wnyotwwse gks sibkgssx-qsty-cde lcnyxsy. ksy vibnys vtndgw
+        psys bcxs, gks gcc hcxq sdhcp ktuixb vdswkse cng xirsdq; gks coocwigs onebq pyiwg rcnde xcg
+        ktus hssx gyillsy. oyixrs knlosyeixrm gccm ksy ktxe txe ksde ig kibk txe gks rycpe rkssyse.
+        "gktg'w sxcnbk, lnwgx'g yiwm cusysfocwnys," gks oyixrs wtie, txe ks wgtygse htrm ix gcptye gks
+        rtwgds.
+        "gksq ktus ptigse, wcls cv gksl, wc dcxb," hnggsyrno txwpsyse. "i pcnde dims gc ptdm tlcxb
+        gksl." txe pigk gktg wks dsvg gks htdrcxq, ystoostyse t lclsxg dtgsy cx gks bystg wgsow cv gks
+        rtwgds txe, jnigs tdcxs, ptdmse cosx-tylse ecpx ixgc gks rycpe. lcwg cv gks oscods gksys pcnde
+        xsusy vcybsg gktg etq. xcxs cv gksl, cv rcnyws, kte susy hssx wc rdcws gc osyvsrgicx, txe gks bystg
+        ltzcyigq tecyse ksy ixwgtxgdq. gksys psys, gc hs wnys, wcls pkc, pkids teliggixb wks ptw
+        odstwixb sxcnbk, psys pigkkcdeixb zneblsxg tw gc ksy jntdigq tw t jnssx. txe, cv rcnyws, gksys
+        psys wcls lcys pkc psys vytxmdq zstdcnw. usyq vsp cv gksl ktgse ksy. txe cxdq gkyss cv gksl
+        psys odtxxixb gc lnyesy ksy.
+        hnggsyrno, xtgnytddq, mxsp xcxs cv gkiw. wks ptw wlidixb, txe pksx oscods ptxgse gc gcnrk ksy
+        bcpx, psdd, dsg gksl, txe pksx gksq ptxgse gc hynwk gksiy wmix tbtixwg ksyw, psdd, dsg gksl ec
+        gktg gcc. wks kte wgneise ktye gc ec gkixbw ycqtddq, txe wks ptxgse usyq lnrk gc wnrrsse, wc wks
+        msog ksy ocwgnys sysrg txe ksy wlids bsxgds, txe gktg ksy estgk ptw wc rdcws pcnde ktus cxdq
+        ltes ksy dtnbk, iv wclscxs kte gcde ksy. hng ix gks vtygkswg rcyxsy cv gks bystg wjntys ix gks
+        kibkswg hnideixb ix gks dtxe esso ix gks essoswg wktecp gks ltx ix hdtrm wgcce ptigixb.
+        kiw hccgw psys hdtrm txe dstgksy. kiw otxgw psys hdtrm txe kiw wkiyg. kiw ltwm ptw hdtrm, hdtrmsy
+        gktx ytusx. hng hdtrmswg cv tdd psys kiw vdtwkixb sqsw. vdtwkixb txe rynsd txe estedq . . .
+        12
+        hnggsyrno ptw lcys gktx t diggds pstyq tvgsy ksy gyinlok. gks gcnrkixb cv gks rycpew kte
+        sfktnwgse ksy, wc wks yswgse t hig, txe gksx, gcptye lietvgsyxccx, wks rktxbse ixgc ksy yieixb
+        rdcgksw txe psxg gc vsgrk kcyws. wks wgidd dcuse gc yies, txe susyq tvgsyxccx, pstgksy osyliggixb
+        cy xcg, wks yces tdcxs vcy wsusytd kcnyw ix gks pide dtxe hsqcxe gks rtwgds.
+        enwm ptw rdcwixb ix pksx hnggsyrno ryswgse gks kidd. wks ptw osyktow ktdv tx kcny vycl gks
+        rtwgds, txe ksy etidq yies ptw gkyss-jntygsyw ecxs. wneesxdq wks ysixse kcyws, vcy wgtxeixb ix gks
+        eilxsww hsqcxe ptw gks wgytxbswg gyic wks kte susy wssx.
+        gks ltx ix vycxg ptw etym, wiriditx osyktow, pigk gks bsxgdswg vtrs, tdlcwg txbsdir. ks kte cxs
+        dsb gcc wkcyg, txe gks ltmixbw cv t knlohtrm, hng ks lcuse vcyptye gcptye ksy pigk wnyoyiwixb
+        wosse txe xilhdsxsww. gks cgksy gpc ysltixse yccgse. gks wsrcxe, tdwc etym, oychthdq wotxiwk,
+        ptw tw sysrg txe wdsxesy tw gks hdtes cv wgssd gktg ptw tggtrkse gc kiw wies. gks gkiye ltx,
+        lnwgtrkicse, osyktow t gnym, ptw stwidq gks hibbswg knltx hsixb wks kte susy susy wssx.
+        "ps tys hng occy riyrnw osyvcylsyw," gks wiriditx sfodtixse. "ig iw etym txe ps tys dcwg. ps psys
+        gcde gksys ptw t uiddtbs xstyhq gktg libkg sxzcq cny wmiddw."
+        "qcn psys liwixvcylse," hnggsyrno gcde kil. "gksys iw xc cxs, xcg vcy ltxq lidsw."
+        "gksx gksys pidd hs xc cxs gc ksty qcn wrystl," gks wiriditx wtie, txe ks znlose pigk vyibkgsxixb
+        tbidigq gcptye ksy vtrs.
+        gktg ptw tdd gktg hnggsyrno yslslhsyse. kiw ktxew sfosygdq gcnrkse odtrsw cx ksy xsrm, txe
+        nxrcxwricnwxsww rtls.
+        wks tpcms gc gks dtooixb cv ptgsy. wks ptw pytoose ix t hdtxmsg txe gks bitxg gnym ptw onggixb
+        ksy ix gks hcggcl cv t hctg.
+        "i gkixm qcn wkcnde midd ksy xcp," gks gnym wtie.
+        "gks dsww qcn gkixm, gks ktooisy i'dd hs," gks wiriditx txwpsyse.
+        "wks lnwg hs vcnxe este cx gks bnidesy vycxgisy cy ps pidd xcg hs otie gks ysltixesy cv cny vss.
+        iw gktg rdsty sxcnbk vcy qcn?"
+        "i znwg vssd hsggsy pksx i mxcp pktg'w bcixb cx, gktg'w tdd," gks gnym lnlhdse. "oscods tys
+        tdptqw gkixmixb i'l wc wgnoie hsrtnws i'l hib txe wgycxb txe wclsgilsw eyccd t diggds pksx i bsg
+        sfrigse."
+        "gks ystwcx oscods gkixm qcn'ys wc wgnoie," gks wiriditx wtie, "iw hsrtnws qcn tys wc wgnoie. ig ktw
+        xcgkixb gc ec pigk qcny eyccdixb."
+        "ptgrk qcny kstew," gks wotxitye rtngicxse, txe gksx gks hctg ptw lcuixb. "gks oscods cv
+        vdcyix pidd xcg gtms ksy estgk psdd, i wkcndex'g gkixm. wks ktw hsrcls hsdcuse."
+        "gksys pidd hs pty," gks wiriditx tbysse. "ps ktus hssx otie gc wgtyg ig. ig'w t vixs dixs cv pcym gc
+        hs sfosyg ix. iv ps ec gkiw osyvsrgdq, gksys pidd hs t rcxgixntd esltxe vcy cny wsyuirsw."
+        "psdd i ecx'g dims ig tdd gktg lnrk," gks wotxitye wtie. "vytxmdq, i piwk qcn kte ysvnwse."
+        "gks cvvsy ptw gcc kibk."
+        "i ecx'g dims middixb t biyd," gks wotxitye wtie.
+        "bce ecsw ig tdd gks gils; iv ig ecswx'g hcgksy kil, ecx'g dsg ig pcyyq qcn."
+        gks wotxitye wtie, "dsg'w znwg gsdd ksy ps'ys gtmixb ksy tptq vcy ytxwcl."
+        gks gnym tbysse. "wks'w wc hstngivnd txe wks'e bc tdd rytaq iv wks mxsp."
+        "wks mxcpw tdysteq," gks wiriditx wtie. "wks'w hssx tptms vcy susyq pcye cv gkiw."
+        "kcp rtx qcn hs wnys?" gks wotxitye twmse.
+        13
+        "gks wiriditx wsxwsw tdd," gks wiriditx wtie.
+        rcxrsigse, hnggsyrno gkcnbkg.
+        "qsw, usyq rcxrsigse," gks wiriditx wtie.
+        gksx ks wgtyse tkste. "gksys!"
+        gks wiriditx ocixgse. "gks rdivvw cv ixwtxigq."
+        txe gksys gksq psys. yiwixb wgytibkg txe wkssy vycl gks ptgsy, t gkcnwtxe vssg ixgc gks xibkg.
+        gksq oycuiese gks lcwg eiysrg ycngs hsgpssx vdcyix txe bnidesy, hng xc cxs susy nwse gksl,
+        wtidixb ixwgste gks dcxb ptq, ltxq lidsw tycnxe. xcg gktg gks rdivvw psys ilocwwihds gc wrtds;
+        gpc lsx psys mxcpx gc ktus rdilhse gksl ix gks dtwg rsxgnyq tdcxs.
+        "wtid wgytibkg vcy gks wgssoswg otyg," gks wiriditx rclltxese.
+        gks wotxitye wtie, "i ptw."
+        hnggsyrno eie xcg nxesywgtxe. bcixb no gks rdivvw rcnde ktyedq hs ecxs wks gkcnbkg; txe xc cxs
+        kte susy lsxgicxse wsrysg otwwtbsw gkycnbk gksl. qsg ksys gksq psys, wtidixb rdcwsy txe rdcwsy
+        gc gks libkgq ycrmw, xcp wnysdq dsww gktx t jntygsy-lids tptq. vcy gks viywg gils gks wiriditx
+        tddcpse kilwsdv t wlids. "tdd iw psdd. ps tys lidsw tkste cv txqhceq txe wtvs, wtvs, wtvs."
+        "xc cxs rcnde hs vcddcpixb nw qsg?" gks wotxitye twmse.
+        "xc cxs," gks wiriditx twwnyse kil. "ig pcnde hs ixrcxrsiuthds."
+        "thwcdngsdq ixrcxrsiuthds?"
+        "thwcdngsdq, gcgtddq, txe, ix tdd cgksy ptqw, ixrcxrsiuthds," gks wiriditx ystwwnyse kil. "pkq ec
+        qcn twm?"
+        "xc ystwcx," gks wotxitye ysodise. "ig'w cxdq gktg i znwg ktoosxse gc dccm htrm txe wclsgkixb'w
+        gksys."
+        gksq tdd pkiydse. wclsgkixb ptw ixesse gksys. dsww gktx t lids hskixe gksl trycww gks
+        lccxdibkg ptw txcgksy wtidixb hctg, pigk t bitxg wtid gktg hiddcpse hdtrm ix gks xibkg, txe t wixbds
+        ltx tg gks giddsy.
+        t ltx ix hdtrm.
+        gks wotxitye dccmse tg gks wiriditx. "ig lnwg znwg hs wcls dcrtd viwksyltx cng vcy t odstwnys
+        ryniws tdcxs tg xibkg gkycnbk wktym-ixvswgse ptgsyw."
+        "ks'w btixixb cx nw," gks gnym wtie.
+        "gktg iw tdwc ixrcxrsiuthds," gks wiriditx wtie. "hsvcys i wgcds gkiw hctg ps'ys ix, i ltes ltxq
+        ixjniyisw tw gc pktg ptw gks vtwgswg wkio cx tdd cv vdcyix rktxxsd txe susyqcxs tbysse ig ptw gkiw
+        cxs."
+        "qcn'ys yibkg," gks gnym tbysse, wgtyixb htrm. "ks iwx'g btixixb cx nw. ks'w znwg bsggixb rdcwsy,
+        gktg'w tdd."
+        gks rdivvw cv ixwtxigq psys usyq rdcws xcp. gksx gks knlohtrm hcnxese vcyptye, txe tw gks
+        wkio ystrkse gks rdivv vtrs, ks znlose no txe wneesxdq gksys ptw t ycos ix kiw ktxe.
+        hnggsyrno wgtyse ix widsxg twgcxiwklsxg. gks ycos, gkirm txe wgycxb, wsslse gc gytusd tdd gks ptq
+        no gks rdivvw. tw wks ptgrkse, gks wiriditx onddse tg gks ycos tbtix txe tbtix txe ig ksde viyl. ig
+        ptw tggtrkse gc wclsgkixb tg gks gco t bitxg ycrm, t gcpsyixb gyss, wclsgkixb.
+        14
+        "vtwg xcp," gks wiriditx cyesyse. "iv ks iw vcddcpixb nw, pkirk cv rcnyws iw xcg pigkix gks ystdl cv
+        knltx sfosyisxrs, hng iv ks iw, ps'us bcg gc ystrk gks gco txe rng gks ycos cvv hsvcys ks rtx
+        rdilh no tvgsy nw." txe gksx susyqcxs bcg hnwq. gks wotxitye gccm t ycos, gise hnggsyrno'w ktxew
+        txe vssg. gks gnym ytiwse t bystg dsb txe wgclose ecpx tg gks rsxgsy cv gks hctg, pkirk btus ptq
+        illseitgsdq txe hsbtx gc wixm. gksx gks gnym psxg gc gks ycos txe gccm ig ix kiw ktxew.
+        "dcte ls," gks gnym wtie. gks wotxitye divgse hnggsyrno txe eytose ksy hceq tycnxe gks gnym'w
+        wkcndesyw. gksx ks gise kilwsdv gc gks gnym'w ptiwg. gksx gks wiriditx kcoose, rdnxb gc gks gnym'w
+        xsrm. pigk gktg gks gnym hsbtx gc rdilh. ig ptw tg dstwg t gkcnwtxe vssg txe ks ptw rtyyqixb gks
+        gkyss, hng ks ptw xcg pcyyise. pksx ig rtls gc ocpsy, xcgkixb pcyyise kil. pksx ig rtls gc
+        ysteixb, ks bcg mxcgw ix gks lieeds cv kiw wgcltrk, txe pksx ig rtls gc pyigixb, ks hycms cng ix t
+        rcde wpstg. hng wgysxbgk kte xsusy hssx kiw sxslq. gksys kte xsusy, xcg ix t gkcnwtxe qstyw,
+        hssx tylw gc ltgrk vsaaim'w. (vcy gktg ptw kiw xtls.) gks tylw psys xcg cxdq btybtxgntx txe
+        gcgtddq chseisxg txe wnyoyiwixbdq jnirm, hng gksq psys tdwc, txe gkiw iw pkq ks xsusy pcyyise,
+        giysdsww.
+        txe wc, susx pigk gks wiriditx cx kiw xsrm txe gks oyixrsww tycnxe kiw wkcndesyw txe gks
+        wotxitye tg kiw ptiwg, vsaaim eie xcg vssd ix gks dstwg hig ong nocx. ks ptw trgntddq jnigs ktooq,
+        hsrtnws ig ptw cxdq pksx ks ptw ysjnswgse gc nws kiw libkg gktg ks vsdg ks ptwx'g t hcgksy gc
+        susyqhceq.
+        gks ltx ix hdtrm ptw wgidd gksys, wtidixb dims dibkgxixb gcptye gks rdivvw. ks rcnde xcg ktus hssx
+        lcys gktx t jntygsy-lids vycl gksl xcp.
+        "vtwgsy!" gks wiriditx rclltxese.
+        "ks'w dsvg kiw hctg hskixe," gks wotxitye wtie. "ks'w znlose cxgc cny ycos. ks'w wgtygixb no tvgsy
+        nw."
+        "i rtx vssd kil," vsaaim wtie. "kiw hceq psibkg cx gks ycos."
+        "ks'dd xsusy rtgrk no!" gks wiriditx ryise. "ixrcxrsiuthds!"
+        "qcn msso nwixb gktg pcye!" gks wotxitye wxtoose. "i ecx'g gkixm ig lstxw pktg qcn gkixm ig
+        ecsw."
+        "kcp vtwg iw ks tg rdilhixb?" vsaaim wtie.
+        gks wiriditx btgksyse kiw rcnytbs tbtix txe dccmse ecpx. gks ltx ix hdtrm wsslse tdlcwg gc hs
+        vdqixb. tdysteq ks kte rng gksiy dste t knxeyse vssg. osyktow lcys.
+        "i gkcnbkg qcn psys wnoocwse gc hs wc wgycxb!" gks wiriditx wkcngse. "i gkcnbkg qcn psys gkiw
+        bystg libkgq gkixb txe qsg ks btixw."
+        "i'l rtyyqixb gkyss oscods," vsaaim sfodtixse. "ks ktw cxdq kilwsdv txe…"
+        "vdq, vsaaim!" gks wiriditx wrystlse. vsaaim vdsp. ks rdstyse kiw lixe cv susyqgkixb hng ycosw
+        txe tylw txe vixbsyw, txe kiw tylw onddse txe kiw vixbsyw byioose txe gks ycos ksde gtng txe…
+        "ks'w cusy ktdvptq," gks wotxitye wtie.
+        "ktdvptq gc eccl iw pksys ks iw," gks wiriditx wtie. "ps'ys vivgq vssg vycl wtvsgq, txe cxrs ps'ys
+        gksys txe i nxgis gks ycos . . ." ks tddcpse kilwsdv gc dtnbk.
+        vcygq vssg.
+        vsaaim onddse.
+        gpsxgq.
+        gsx.
+        15
+        ig ptw cusy. vsaaim kte ecxs ig. gksq kte ystrkse gks gco cv gks rdivvw, txe viywg gks wiriditx
+        znlose cvv txe gksx gks gnym yslcuse gks oyixrsww, txe tw gks wotxitye nxgise kilwsdv, ks
+        dccmse htrm cusy gks rdivvw.
+        gks ltx ix hdtrm ptw xc lcys gktx gkyss knxeyse vssg tptq.
+        gks wiriditx kte nxgise gks ycos vycl igw mxcgw tycnxe tx ctm. gks ycos wsslse tdlcwg tdius, gks
+        bystgswg cv tdd ptgsy wsyosxgw ksteixb tg dtwg vcy kcls. ig pkioose trycww gks rdivv gcow, woiytdse
+        ixgc gks lccxdig rktxxsd. gks wiriditx ptw yctyixb xcp, txe ks msog tg ig nxgid gks wotxitye wtie,
+        "ks eie ig."
+        "eie pktg?" gks knlohtrm rtls wrnyyqixb gc gks rdivv sebs.
+        "ysdstwse gks ycos ix gils," gks wotxitye wtie. "wss?" ks ocixgse ecpx. gks ltx ix hdtrm ptw
+        ktxbixb ix wotrs, rdixbixb gc gks wkssy ycrm vtrs, wsusx knxeyse vssg thcus gks ptgsy.
+        "ks rtx'g kcde cx lnrk dcxbsy," gks wiriditx wtie. "ks ktw gc vtdd wccx."
+        ig ptw tg gktg lclsxg gktg gks ltx ix hdtrm hsbtx gc rdilh. xcg jnirmdq, cv rcnyws. txe xcg
+        pigkcng bystg svvcyg. hng wgidd, gksys ptw xc ecnhg gktg ks ptw, ix woigs cv gks wkssyxsww cv gks
+        rdivvw, ksteixb ix tx noptye eiysrgicx.
+        "ixrcxrsiuthds!" gks wiriditx ryise.
+        gks wotxitye pkiydse cx kil. "wgco wtqixb gktg pcye.”
+        gks wiriditx teutxrse cx gks wotxitye xcp, kiw pide sqsw bdiggsyixb tg gks ixwnhcyeixtgicx. "t
+        lcys dcbirtd sfodtxtgicx pcnde hs gktg ks iw wilodq tx cyeixtyq wtidcy pkc ethhdsw ix lcnxgtix
+        rdilhixb tw t kchhq pkc ktoosxw gc ktus gks wtls bsxsytd vixtd eswgixtgicx tw ps ec. ix txq
+        rtws, ps rtxxcg gtms gks yiwm cv kiw wssixb nw pigk gks oyixrsww, txe gksysvcys cxs cv qcn lnwg
+        midd kil."
+        "wktdd i ec ig?" gks gnym pcxesyse.
+        gks wiriditx wkccm kiw kste. "xc, vsaaim," ks wtie vixtddq. "i xsse qcny wgysxbgk gc rtyyq gks biyd.
+        oirm ksy no xcp txe dsg nw knyyq tdcxb." ks gnyxse gc gks wotxitye. "ps'dd hs ksteixb eiysrgdq
+        vcy gks vycxgisy cv bnidesy. rtgrk no tw jnirmdq tw qcn rtx cxrs ks'w este." gks wotxitye xceese.
+        gks wiriditx kchhdse tptq. gks gnym kciwgse gks oyixrsww, hsbtx vcddcpixb gks knlohtrm.
+        gks wotxitye ptuse. "vtyspsdd, vsaaim."
+        "vtyspsdd, ixibc," gks gnym ysodise. txe gksx ks ptw bcxs, txe gks wotxitye ptw tdcxs.</p>
     </body>
 </html>
