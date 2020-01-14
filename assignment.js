@@ -1,4 +1,4 @@
-console.log("Hello World! I'm printing from `solution.js`");
+console.log("Hello World! I'm printing from `assignment.js`");
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * *
@@ -18,7 +18,7 @@ const CAESAR_SHIFT = 10
  * > string - encrypted (ciphertext) password
  */
 function passwordEncrypter(password) {
-  return encryptCaesar(password, CAESAR_SHIFT)
+  return password
 }
 
 
@@ -33,8 +33,7 @@ function passwordEncrypter(password) {
  * > string - plaintext password
  */
 function passwordCracker(encryptedPassword) {
-  var undoShift = (26 - CAESAR_SHIFT) % 26
-  return encryptCaesar(encryptedPassword, undoShift)
+  return encryptedPassword
 }
 
 
@@ -56,8 +55,9 @@ function substitutionDecrypter(encrypted_msg) {
   letter_frequency = findWordFrequencies(encrypted_msg)
 
 
-  //TODO: Use createFrequencyMap function (given to you below) to generate substitution_key
-  var substitution_key = createFrequencyMap(letter_frequency)
+  //TODO: Use createFrequencyMap function (given to you below) to
+  //      generate (and then save) substitution_key
+
     //Q: What is substitution_key?
 
   //TODO: Use substitution_key to translate the text automatically
@@ -88,14 +88,9 @@ function findWordFrequencies(encrypted_msg) {
     "u": 0, "v": 0, "w": 0, "x": 0, "y": 0,
     "z": 0
   }
- //TODO: count frequencies of letters and update map
-  for (var i = 0; i < encrypted_msg.length; i++)
-  {
-    if (isLetter(encrypted_msg[i])) {
-      letter_frequency[encrypted_msg[i]] += 1
-    }
-  }
-  return letter_frequency
+ //TODO: count frequencies of letters in encrypted_msg
+ //       and update letter_frequency map
+ return letter_frequency
 }
 
 /* Uses substitution_key to undo substitution encryption to encrypted_msg
@@ -111,16 +106,9 @@ function findWordFrequencies(encrypted_msg) {
  *              This is the book you are looking for
  */
 function undoSubstitution(encrypted_msg, substitution_key) {
-  var plaintext = ""
-  for (var i = 0; i < encrypted_msg.length; i++)
-  {
-    var char = encrypted_msg[i]
-    if (isLetter(char)) {
-      char = substitution_key[mapping[char]]
-    }
-    plaintext += char
-  }
-  return plaintext
+  //TODO: Use substitution_key to replace all the alphabet (a-z) characters in
+  //       encrypted_msg with their plaintext equivalent. Return this result
+  return encrypted_msg
 }
 
 
